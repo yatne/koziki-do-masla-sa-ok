@@ -1,36 +1,28 @@
-import React from 'react';
+// @ts-nocheck
+import React, { useState} from 'react';
 import './App.css';
-import {SuperSlideMe, Level} from "react-super-slide-me";
-
-const testLevel: Level = {
-  boardSize: 5,
-  number: 1,
-  elements: [
-    {type: "Start", posX: 0, posY: 1},
-    {type: "End", posX: 1, posY: 1},
-  ]
-}
+import {SuperSlideMe} from "react-super-slide-me";
 
 function App() {
+  const [endReached, setEndReached] = useState(false)
+
   return (
     <div className="App">
       <header className="App-header">
-        <SuperSlideMe
-          levels={[testLevel]}
-          gameName="Gierka!"
-          width="500px"
-        />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className="game-container">
+          <SuperSlideMe
+            width="500px"
+            onLastLevelReached={() => setEndReached(true)}
+          />
+        </div>
+        {endReached && (
+          <iframe
+            width="520"
+            height="360"
+            src="https://www.youtube.com/embed/dhIFBWxSt6E?autoplay=1"
+            allow='autoplay'
+          />
+        )}
       </header>
     </div>
   );
