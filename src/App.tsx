@@ -11,7 +11,7 @@ function App() {
       <header className="App-header">
         <div className="game-container">
           <SuperSlideMe
-            width="500px"
+            id="unlockedLevel"
             onLastLevelReached={() => setEndReached(true)}
           />
         </div>
