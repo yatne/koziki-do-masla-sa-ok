@@ -1,29 +1,28 @@
-// @ts-nocheck
 import React, { useState} from 'react';
 import './App.css';
-import {SuperSlideMe} from "react-super-slide-me";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import FullGameSite from "./components/FullGameSite";
+import ShortGameSite from "./components/ShortGameSite";
+import EasyGameSite from "./components/EasyGameSite";
+import SetsGameSite from "./components/SetsGameSite";
+import Navigation from "./components/Navigation";
 
 function App() {
-  const [endReached, setEndReached] = useState(false)
-
   return (
     <div className="App">
-      <header className="App-header">
-        <div className="game-container">
-          <SuperSlideMe
-            id="unlockedLevel"
-            onLastLevelReached={() => setEndReached(true)}
-          />
-        </div>
-        {endReached && (
-          <iframe
-            width="520"
-            height="360"
-            src="https://www.youtube.com/embed/dhIFBWxSt6E?autoplay=1"
-            allow='autoplay'
-          />
-        )}
-      </header>
+      <BrowserRouter>
+        <Navigation />
+        <Routes>
+          <Route path='/short' element={<ShortGameSite />} />
+          <Route path='/easy' element={<EasyGameSite />} />
+          <Route path='/sets' element={<SetsGameSite />} />
+          <Route path='/' element={<FullGameSite />}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
