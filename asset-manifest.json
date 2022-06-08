@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/koziki-do-masla-sa-ok/static/css/main.5dde2b9a.css",
-    "main.js": "/koziki-do-masla-sa-ok/static/js/main.8d1cc68c.js",
+    "main.js": "/koziki-do-masla-sa-ok/static/js/main.d15f939b.js",
     "static/js/787.d7afd7bf.chunk.js": "/koziki-do-masla-sa-ok/static/js/787.d7afd7bf.chunk.js",
     "index.html": "/koziki-do-masla-sa-ok/index.html",
     "main.5dde2b9a.css.map": "/koziki-do-masla-sa-ok/static/css/main.5dde2b9a.css.map",
-    "main.8d1cc68c.js.map": "/koziki-do-masla-sa-ok/static/js/main.8d1cc68c.js.map",
+    "main.d15f939b.js.map": "/koziki-do-masla-sa-ok/static/js/main.d15f939b.js.map",
     "787.d7afd7bf.chunk.js.map": "/koziki-do-masla-sa-ok/static/js/787.d7afd7bf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5dde2b9a.css",
-    "static/js/main.8d1cc68c.js"
+    "static/js/main.d15f939b.js"
   ]
 }
